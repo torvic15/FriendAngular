@@ -1,0 +1,13 @@
+{
+    "social": [
+      { "id" : 1,
+        "name": "Victor",
+        "surname" : "Soler" ,
+        "age" : 26,
+        "friends": 0,
+        "avatar": "torvic8_20901.png",
+        "post" : "Historias.id"
+      }
+    ]
+   
+  }

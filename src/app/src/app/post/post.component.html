@@ -1,0 +1,38 @@
+
+    <head>
+        
+    </head>
+    <div class="container">
+          <nav>
+          <ul class="nav nav-pills">
+              <div><li role="presentation" class="active"><a href="#">Mis Historias </a></li></div>
+              <div><li role="presentation"><a href="person/person.component.html">Mis Cosas </a></li></div>
+              <li role="presentation"><a href="#">Mis colegas</a></li>
+            </ul>
+          </nav>
+      </div>
+      <br>
+      <div class="jumbotron mt-3" *ngFor="let person of myPerson">
+        <img [src]="person.avatar"/>
+        <p >{{person.name }} {{person.surname}}</p>
+        <p></p>
+      </div>
+      <div class="jumbotron mt-4">
+        <p>Escribe Aqui:</p>
+      <textarea class="area-grande" [(ngModel)]="text" ></textarea>
+      <br>
+      <button (click)="addPost()">Publicar Post</button>
+      </div>
+      <div class="jumbotron mt-5"  >
+        <div class="post" *ngFor="let post of myPost" >
+          
+          <p class= "left"><img [src]="post.person.avatar"/></p>
+          <p class= "left">{{post.person.name}} {{post.person.surname}}</p>
+          
+          <p class="rigth">{{post.publication| date:'medium'}}</p>
+          
+          <p>{{post.text}}</p>
+          <br>
+        </div>
+      </div>
+

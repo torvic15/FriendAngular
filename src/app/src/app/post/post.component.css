@@ -1,0 +1,24 @@
+.jumbotron{
+    background-color: red;
+    width: 850px;
+    margin-left: 600px;
+    align-items: center;
+}
+.area-grande{
+    width: 750px;
+    height: 500px;
+}
+.post{
+    border:solid black;
+    background-color: white;
+}
+.left{
+    text-align: left; 
+}
+.rigth{
+    text-align:right;
+    margin-top:5px;
+}
+.all{
+    border: solid 1em black;
+}

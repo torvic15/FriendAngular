@@ -1,0 +1,47 @@
+
+<head></head>
+    
+    <div class="container">
+        <nav>
+        <ul class="nav nav-pills">
+            <div><li role="presentation" class="active"><a href="#">Mis Historias </a></li></div>
+            <div><li role="presentation"><a href="../person/person.component.html">Mis Cosas </a></li></div>
+            <li role="presentation"><a href="#">Mis colegas</a></li>
+          </ul>
+        </nav>
+    </div>
+    <br>
+    <div class="jumbotron mt-3" *ngFor="let person of myPerson">
+        <h1>Mis Datos</h1>
+      <img [src]="person.avatar"/>
+      <p ><b>Name:</b>{{person.name}}</p>
+      <p><b>Surname:</b>{{person.surname}}</p>
+      <p><b>Age:{{person.age}}</b></p>
+    </div> 
+    <h1>Mis Amigos</h1>
+    <div class="jumbotron mt-3" *ngFor="let friend of myFriends">
+        <div class="friend">
+        <img [src]="friend.avatar"/>
+        <p ><b>Name:</b>{{friend.name}}</p>
+        <p><b>Surname:</b>{{friend.surname}}</p>
+        <p>Age:{{friend.age}}</p>
+        </div>
+        <div>
+        <img [src]="friend.solicitudes.avatar"/>
+        <p ><b>Name:</b>{{friend.solicitudes.name}}</p>
+        <p><b>Surname:</b>{{friend.solicitudes.surname}}</p>
+        <p>Age:{{friend.solicitudes.age}}</p>
+        </div>
+      </div> 
+      <h1>Solicitudes de amistad</h1>
+      <div class="jumbotron mt-3" *ngFor="let another of anotherPeople">
+          
+          <div class="friend">
+          <img [src]="another.avatar"/>
+          <p ><b>Name:</b>{{another.name}}</p>
+          <p><b>Surname:</b>{{another.surname}}</p>
+          <p>Age:{{another.age}}</p>
+          <button (click)="addFriend()">Añadir Amigo</button>
+          </div>
+        </div> 
+
